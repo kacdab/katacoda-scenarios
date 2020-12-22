@@ -32,6 +32,10 @@
 
 8. Visit the environment
 
+Render port 8000/exchange/:
+
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/exchange/
+
 Render port 8000:
 
 https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/
