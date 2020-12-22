@@ -6,6 +6,7 @@
 
 2. Unzip the Platform
 
+`apt update && apt install unzip`{{execute}}
 `unzip jlupin_platform_version_1_6_1_latest.zip`{{execute}}
 
 3. Create the JLupin directory
