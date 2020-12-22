@@ -25,7 +25,7 @@
 
 6. Set nginx user to root/root
 
-`echo 'user root root;' | cat - /opt/jlupin/platform/start/configuration/edge.conf | tee /opt/jlupin/platform/start/configuration/edge.conf`{{execute]]
+`echo 'user root root;' | cat - /opt/jlupin/platform/start/configuration/edge.conf | tee /opt/jlupin/platform/start/configuration/edge.conf`{{execute}}
 
 7. Start the JLupin Platform server
 
