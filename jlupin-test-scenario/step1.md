@@ -28,4 +28,10 @@
 
 7. Visit the environment
 
+Render port 8000:
 
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/
+
+Display page allowing user to select port:
+
+https://[[HOST_SUBDOMAIN]]-[[KATACODA_HOST]].environments.katacoda.com/
