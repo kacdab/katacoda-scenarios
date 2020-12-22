@@ -23,11 +23,15 @@
 `chmod 750 /opt/jlupin/platform/start/start.sh`{{execute}}
 `chmod 750 /opt/jlupin/platform/start/control.sh`{{execute}}
 
-6. Start the JLupin Platform server
+6. Set nginx user to root/root
+
+`echo 'user root root;' | cat - /opt/jlupin/platform/start/configuration/edge.conf | tee /opt/jlupin/platform/start/configuration/edge.conf`{{execute]]
+
+7. Start the JLupin Platform server
 
 `/opt/jlupin/platform/start/start.sh`{{execute}}
 
-7. Visit the environment
+8. Visit the environment
 
 Render port 8000:
 
