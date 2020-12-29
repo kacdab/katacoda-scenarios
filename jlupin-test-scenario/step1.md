@@ -26,11 +26,15 @@
 
 `echo 'user root root;' | cat - /opt/jlupin/platform/start/configuration/edge.conf | tee /opt/jlupin/platform/start/configuration/edge.conf`{{execute}}
 
-7. Start the JLupin Platform server
+7. Set 128M for Xmx for the services
+
+`for f in `find . -name configuration.yml`; do sed -i 's/Xmx256M/Xmx128M/g' $f; done`{{execute}}
+
+8. Start the JLupin Platform server
 
 `/opt/jlupin/platform/start/start.sh`{{execute}}
 
-8. Visit the environment
+9. Visit the environment
 
 Render port 8000/exchange/:
 
