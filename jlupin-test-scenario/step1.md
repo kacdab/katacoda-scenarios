@@ -29,7 +29,7 @@
 7. Set 128M for Xmx for the services
 
 `cd /opt/jlupin/platform/application`{{execute}}
-`for f in $(find . -name configuration.yml); do sed -i 's/Xmx256M/Xmx128M/g' $f; done`{{execute}}
+`for f in $(find . -name configuration.yml); do sed -i 's/Xmx256M/Xmx64M/g' $f; done`{{execute}}
 
 8. Start the JLupin Platform server
 
