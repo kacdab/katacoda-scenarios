@@ -21,6 +21,6 @@
     "uilayout": "terminal-terminal"
   },
   "backend": {
-    "imageid": "openjdk:15"
+    "imageid": "ubuntu2004"
   }
 }
