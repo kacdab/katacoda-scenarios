@@ -34,7 +34,7 @@
 8. Disable SSL
 
 `cd /opt/jlupin/platform`{{execute}}
-`sed -e '/ssl/ s/^#*/#/g' technical/nginx/linux/conf/servers/admin.conf`{{execute}}
+`sed -i '/ssl/ s/^#*/#/g' technical/nginx/linux/conf/servers/admin.conf`{{execute}}
 
 9. Start the JLupin Platform server
 
