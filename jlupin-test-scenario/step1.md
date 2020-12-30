@@ -29,7 +29,8 @@
 7. Set 64M for Xmx for the services
 
 `cd /opt/jlupin/platform/application`{{execute}}
-`for f in $(find . -name configuration.yml); do sed -i 's/Xmx256M/Xmx64M/g' $f; done`{{execute}}
+`for f in $(find . -name configuration.yml); do sed -i 's/Xmx[0-9]*M/Xmx64M/g' $f; done`{{execute}}
+`for f in $(find . -name configuration.yml); do sed -i 's/Xms[0-9]*M/Xms64M/g' $f; done`{{execute}}
 
 8. Disable SSL
 
