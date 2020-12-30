@@ -34,6 +34,8 @@
 `for f in $(find . -name servlet_configuration.yml); do sed -i 's/Xmx[0-9]*M/Xmx128M/g' $f; done`{{execute}}
 `for f in $(find . -name servlet_configuration.yml); do sed -i 's/Xms[0-9]*M/Xms128M/g' $f; done`{{execute}}
 `sed -i 's/Xmx[0-9]*M/Xmx128M/g' /opt/jlupin/platform/start/control/configuration/setenv`{{execute}}
+`sed -i 's/Xmx[0-9]*M/Xms192M/g' /opt/jlupin/platform/application/webcontrol/servlet_configuration.yml`{{execute}}
+`sed -i 's/Xmx[0-9]*M/Xmx192M/g' /opt/jlupin/platform/application/webcontrol/servlet_configuration.yml`{{execute}}
 
 8. Disable SSL
 
