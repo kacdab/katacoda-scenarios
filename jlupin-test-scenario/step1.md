@@ -26,16 +26,21 @@
 
 `echo 'user root root;' | cat - /opt/jlupin/platform/start/configuration/edge.conf | tee /opt/jlupin/platform/start/configuration/edge.conf`{{execute}}
 
-7. Set 128M for Xmx for the services
+7. Set 64M for Xmx for the services
 
 `cd /opt/jlupin/platform/application`{{execute}}
 `for f in $(find . -name configuration.yml); do sed -i 's/Xmx256M/Xmx64M/g' $f; done`{{execute}}
 
-8. Start the JLupin Platform server
+8. Disable SSL
+
+`cd /opt/jlupin/platform`{{execute}}
+`sed -e '/ssl/ s/^#*/#/g' technical/nginx/linux/conf/servers/admin.conf`{{execute}}
+
+9. Start the JLupin Platform server
 
 `/opt/jlupin/platform/start/start.sh`{{execute}}
 
-9. Visit the environment
+10. Visit the environment
 
 Render port 8000/exchange/:
 
