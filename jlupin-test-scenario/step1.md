@@ -26,7 +26,12 @@
 
 `echo 'user root root;' | cat - /opt/jlupin/platform/start/configuration/edge.conf | tee /opt/jlupin/platform/start/configuration/edge.conf`{{execute}}
 
-7. Set 64M for Xmx for the services
+7. Disable queue and channel services
+
+`rm -rf /opt/jlupin/platform/application/channelMicroservice`{{execute}}
+`rm -rf /opt/jlupin/platform/application/queueMicroservice`{{execute}}
+
+8. Set 64M for Xmx for the services
 
 `cd /opt/jlupin/platform/application`{{execute}}
 `for f in $(find . -name configuration.yml); do sed -i 's/Xmx[0-9]*M/Xmx64M/g' $f; done`{{execute}}
@@ -37,16 +42,16 @@
 `sed -i 's/Xmx[0-9]*M/Xms192M/g' /opt/jlupin/platform/application/webcontrol/servlet_configuration.yml`{{execute}}
 `sed -i 's/Xmx[0-9]*M/Xmx192M/g' /opt/jlupin/platform/application/webcontrol/servlet_configuration.yml`{{execute}}
 
-8. Disable SSL
+9. Disable SSL
 
 `cd /opt/jlupin/platform`{{execute}}
 `sed -i '/ssl/ s/^#*/#/g' technical/nginx/linux/conf/servers/admin.conf`{{execute}}
 
-9. Start the JLupin Platform server
+10. Start the JLupin Platform server
 
 `/opt/jlupin/platform/start/start.sh`{{execute}}
 
-10. Visit the environment
+11. Visit the environment
 
 Render port 8000/exchange/:
 
