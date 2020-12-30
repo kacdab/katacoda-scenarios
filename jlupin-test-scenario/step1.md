@@ -31,6 +31,7 @@
 `cd /opt/jlupin/platform/application`{{execute}}
 `for f in $(find . -name configuration.yml); do sed -i 's/Xmx[0-9]*M/Xmx64M/g' $f; done`{{execute}}
 `for f in $(find . -name configuration.yml); do sed -i 's/Xms[0-9]*M/Xms64M/g' $f; done`{{execute}}
+`for f in $(find . -name servlet_configuration.yml); do sed -i 's/Xmx[0-9]*M/Xmx64M/g' $f; done`{{execute}}
 `for f in $(find . -name servlet_configuration.yml); do sed -i 's/Xms[0-9]*M/Xms64M/g' $f; done`{{execute}}
 `sed -i 's/Xmx[0-9]*M/Xmx128M/g' /opt/jlupin/platform/start/control/configuration/setenv`{{execute}}
 
